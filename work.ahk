@@ -3,6 +3,8 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+#include %A_ScriptDir%\inc\open_or_switch.ahk
+
 ^!+F1::
 	Run, chrome.exe "https://github.com/ChromatixAU"
 	return
@@ -41,8 +43,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ^!+F16::MsgBox You pressed G16!
 
-^!+F17::MsgBox You pressed G17!
+^!+F17::
+	open_gitbash()
+	return
 
 ^!+F18::
-	Run, C:\Program Files\Git\git-bash.exe
+	open_or_switch_gitbash()
 	return
