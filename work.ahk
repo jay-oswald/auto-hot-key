@@ -41,8 +41,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ^!+F15::MsgBox You pressed G15!
 
-^!+F16::MsgBox You pressed G16!
-
+^!+F16::
+	open_or_switch_phpstorm()
+	return
+	
 ^!+F17::
 	open_gitbash()
 	return
