@@ -22,3 +22,7 @@ open_or_switch_phpstorm(){
 	else
 		WinActivate ahk_class SunAwtFrame
 }
+
+open_with_notepad(file_path){
+	Run, C:\Program Files\Notepad++\notepad++.exe "%file_path%"
+}

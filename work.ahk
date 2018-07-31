@@ -1,9 +1,10 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #include %A_ScriptDir%\inc\open_or_switch.ahk
+#include %A_ScriptDir%\inc\general.ahk
 
 ^!+F1::
 	Run, chrome.exe "https://github.com/ChromatixAU"
@@ -35,9 +36,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ^!+F12::MsgBox You pressed G12!
 
-^!+F13::MsgBox You pressed G13!
-
-^!+F14::MsgBox You pressed G14!
+^!+F13::
+	open_with_notepad(ssh_config_file_path())
+	return
+	
+^!+F14::
+	paste_contents_of_file(get_user_directory() . "/.ssh/id_rsa.pub")
+	return
 
 ^!+F15::MsgBox You pressed G15!
 
