@@ -45,7 +45,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 	paste_contents_of_file(get_user_directory() . "/.ssh/id_rsa.pub")
 	return
 
-^!+F15::MsgBox You pressed G15!
+^!+F15::
+	Reload
+	return
 
 ^!+F16::
 	open_or_switch_phpstorm()
