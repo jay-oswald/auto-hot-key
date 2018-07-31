@@ -1,4 +1,6 @@
-﻿get_user_directory(){
+﻿CapsLock:: return ;Disabling capslock
+
+get_user_directory(){
 	return % "C:\Users\" . A_UserName
 }
 
