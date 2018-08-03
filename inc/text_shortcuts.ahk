@@ -1,3 +1,6 @@
-﻿::tare::tar -xvzf 
+﻿;Linux commands
+::tare::tar -xvzf 
 ::tarc::tar -cvzf 
-::mabye::maybe ;because I can't spell
+
+;because I can't spell
+::mabye::maybe 
